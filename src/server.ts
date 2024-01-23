@@ -4,7 +4,7 @@ import { prismaClient } from './database'
 const app = express()
 app.use(express.json())
 
-const port = process.env.PORT ?? 4000
+const port = process.env.c ?? 4000
 
 app.get('/books', async (request, response) => {
   const books = await prismaClient.book.findMany()
